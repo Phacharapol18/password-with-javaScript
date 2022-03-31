@@ -4,11 +4,13 @@ function generatePassword(){
   let userCon = confirm(`Is this your final length: ${userInput}.`)
   let convert = + userInput;
    
- if (userCon){
+ if (userInput == convert && convert > 7 && userCon === true && convert <= 128){
     alert('Here is your password, if not satisfy, please click generate password again');
    } else {
+     alert('Please input number only and minimum of 8 characters no more then 128 characters.')
      return;
-   }
+    }
+
   
   let randomLetter = ['z','l','k','e','a','r','g','@','#','@','$','t','a','k','n','v','o','a','h','r','r','j','f','d','g','j','h','%'];
   
